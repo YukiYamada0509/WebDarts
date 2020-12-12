@@ -1,9 +1,15 @@
-{% extends 'base.html' %}
- 
-{% block content %}
-    <div>
-        おうちで、誰とでも。
-        ソフトでも、ハードでも。
-        !!!!!
-    </div>
+{% extends 'home/base.html' %}
+
+{% block main-contents %}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'home/style.css' %}">
+</head>
+
+<div>Homeメニュー</div>
+<div>ユーザメニュと</div>
+<div>レーティングをここに表示したい</div>
+
 {% endblock %}

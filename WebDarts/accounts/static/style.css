@@ -4,15 +4,6 @@ align-items: center;
 background-color: rgba(112,123,239, 0.5);
 }
 
-.wrap_nav{
-display: flex;
-align-items: center;
-justify-content:space-around;
-background-color: white;
-margin: 0;
-padding: 0;
-}
-
 .siteName{
 
    width:80%;

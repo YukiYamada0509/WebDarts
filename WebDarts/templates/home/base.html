@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'home/style.css' %}">
+</head>
+
+<div class="contents-container">
+  <div class="side-menu">
+    <div><a href="{% url 'game_menu:index' %}">Game</a></div>
+    <div><a href="{% url 'data_menu:index' %}">Data</a></div>
+    <div><a href="{% url 'setting:index' %}">Setting</a></div>
+  </div>
+  <div class="main-contents">
+    {% block main-contents %}{% endblock %}
+  </div> 
+</div>
+
+{% endblock %}

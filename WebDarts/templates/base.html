@@ -5,41 +5,22 @@
 <head>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <title>suisui</title>
-    <link rel="stylesheet" type="text/css" href="{%static 'home/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
-    <div class="wrap">
-        <h1 class="siteName">WebDarts</h1>
-        <h3 class="providerName">YamaDarts</h3></li>
-    </div>
-
-    <nav>
-        <div>
-            <ul class="test">
-                <li><a href="{% url 'top:index' %}">Top</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'accounts:signup' %}">SignUp</a></li>
-                <li><a href="{% url 'login' %}">Information</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <nav class="wrap_nav">
-    <a href="{% url 'top:index' %}">Top</a>
-    <a href="{% url 'login' %}">Login</a>
-    <a href="{% url 'accounts:signup' %}">SignUp</a>
-    <a href="{% url 'login' %}">Information</a>
-    {% comment %} <a href="menu02.html">Information</a> {% endcomment %}
-    </nav>
-
+    <title>WebDarts</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
 </head>
 
 <body>
-<div class="container">
-    <div class="content">
-        {% block content %}{% endblock %}
+    <nav class="global-nav">
+        <a class="global-content" href="{% url 'top:index' %}">Top</a>
+        <a class="global-content" href="{% url 'login' %}">Login</a>
+        <a class="global-content" href="{% url 'accounts:signup' %}">SignUp</a>
+        {% comment %} <a class="global-content" href="{% url 'login' %}">Information</a> {% endcomment %}
+    </nav>
+    <div class="container">
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
     </div>
-</div>
 </body>
 </html>
